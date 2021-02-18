@@ -12,6 +12,19 @@
   	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>
+
+	<!-- Google Analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-190140969-1', 'auto');
+	ga('require', 'OPT-NSGS88P');
+	ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
 </head>
 
 <body>
@@ -29,7 +42,12 @@
 						<img src="images/{{image}}" alt="Lorem Pixel image" class="img-responsive">
 						<h4>{{title}}</h4>
 					</a>
-					<div class="likeCtr"><button class="btn btn-default likeBtn">Like</button></div>
+					<div class="likeCtr">
+						{{#if viewAlt}}
+						Min! <button class="btn btn-default likeBtn">Like</button></div>
+						{{else}}
+						<button class="btn btn-default likeBtn">Like</button></div>
+						{{/if}}
 					<div class="details"></div>
 				</div>
 			</div>
